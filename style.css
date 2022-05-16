@@ -1,3 +1,7 @@
+* {
+    background-color: orange;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -14,7 +18,7 @@ body {
     padding: 12px;
     border: 12px solid rgb(75, 75, 75);
     border-radius: 12px;
-    background-color: gray;
+    background-color: rgb(128, 128, 128);
 
 
 }
@@ -32,6 +36,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    background-color: rgb(128, 128, 128);
+
 
 }
 
@@ -39,6 +45,8 @@ body {
     display: flex;
     flex: 1;
     gap: 12px;
+    background-color: rgb(128, 128, 128);
+
 
 
 }
@@ -51,6 +59,10 @@ button {
     font-size: 20px;
     font-family: 'Courier New', monospace;
     color: aliceblue;
+}
+
+.buttons:active {
+    font-size: 18px;
 }
 
 button:hover {
@@ -85,6 +97,10 @@ color: black;
     background-color: rgb(206, 63, 63);
     color: aliceblue;
     font-size: 40px;
+}
+
+.bkspce:active {
+    font-size: 25px;
 }
 
 .equal {
