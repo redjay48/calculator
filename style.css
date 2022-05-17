@@ -14,7 +14,7 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 12px;
     padding: 12px;
     border: 12px solid rgb(75, 75, 75);
     border-radius: 12px;
@@ -24,12 +24,15 @@ body {
 }
 
 .display {
+    justify-content: flex-end;
+    margin: 0;
     text-align: right;
     width: 288px;
-    height: 64px;
+    height: 66px;
     display: flex;
-    font-size: 48px;
+    font-size: 62px;
     background-color: rgb(129, 141, 110);
+    border: 2px solid black;
 }
 
 #keys {
@@ -100,10 +103,17 @@ color: black;
 }
 
 .bkspce:active {
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .equal {
+    height: 64px;
+    width: 64px;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+    color: aliceblue;
     background-color: rgb(103, 236, 91);
     color: black;
 }
@@ -111,4 +121,12 @@ color: black;
 .equal:hover {
     background-color: rgb(58, 190, 69);
     color: rgb(51, 51, 51);
+}
+
+.equal:active {
+    font-size: 18px;
+}
+
+.press {
+    font-size: 18px;
 }
