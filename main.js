@@ -4,7 +4,6 @@ const backspace = document.querySelector('.buttons.bkspce');
 const equal = document.querySelector('.equal');
 const numbers = document.querySelectorAll('.numbers');
 const operators = document.querySelectorAll('.operators');
-const addButton = document.querySelector('.add');
 const regex = /[\+\-\*\/\÷\x\^(mod)]/gm;
 const regex1 = /[\+\*\/\÷\x\^(mod)]/gm;
 let result = '';
