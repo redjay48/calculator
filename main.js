@@ -29,12 +29,22 @@ equal.addEventListener('click', equate);
 
 operators.forEach(operator => {
     operator.addEventListener('click', (e) => {
+        let string = display.innerHTML;
         let count = getFrequency(display.innerHTML,['+','-','/','*','mod','%']);
-    if (count > 1) {
-        equate();
-    } else {
-        concat(e);
-    }
+        if (string[0]=== '-') {
+            if (count > 2) {
+                equate();
+            } else {
+                concat(e);
+            }
+        } else {
+            if (count > 1) {
+                equate();
+            } else {
+                concat(e);
+            }
+        }
+    
     })
 });
 
@@ -51,10 +61,20 @@ function getFrequency(string,char) {
     return count;
 };
 
+function findSubtract(string) {
+    for (let i= 1; i<string.length; i++) {
+        if(string.charAt(i) === '-'){
+            [first,second] = [string.substring(0,i),string.substring(i+1)];
+            return first, second;
+        }
+    }
+    [first, second] = string.split(regex1);
+}
 
 function equate() {
     let string = display.innerHTML;
-    (string[0] === '-') ? [first, second] = string.split(regex1): [first, second] = string.split(regex);
+    (string[0] === '-') ?  findSubtract(string) : [first, second] = string.split(regex);
+    console.log(`${first}, ${second}`);
     const num1 = Number(first);
     const num2 = Number(second);
     if (string.includes('+')) {
@@ -74,13 +94,18 @@ function equate() {
 }
 
 function decimal(num) {
-    if (num % 1 === 0) {
-        return num;
-    } else if (num % 1 === 0.5){
-        return num.toFixed(1);
+    if(Number.isFinite(num)) {
+        if (num % 1 === 0) {
+            return num;
+        } else if (num % 1 === 0.5){
+            return num.toFixed(1);
+        } else {
+            return num.toFixed(2);
+        }
     } else {
-        return num.toFixed(2);
+        return `Nope!`;
     }
+    
 }
 
 function add(num1,num2) {
@@ -89,8 +114,11 @@ function add(num1,num2) {
 }
 
 function subtract(num1, num2) {
-    result = num1 - num2;
+
+        result = num1 - num2;
+
     return decimal(result);
+
 }
 
 function divide(num1, num2) {
