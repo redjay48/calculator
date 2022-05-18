@@ -1,6 +1,7 @@
 const display = document.querySelector('.display');
 const buttons = document.querySelectorAll('.numbers');
-const backspace = document.querySelector('.buttons.bkspce');
+const allclear = document.querySelector('.buttons.allclear');
+const backspace = document.querySelector('.bkspce')
 const equal = document.querySelector('.equal');
 const numbers = document.querySelectorAll('.numbers');
 const operators = document.querySelectorAll('.operators');
@@ -22,9 +23,18 @@ function concat(e) {
         }  
 }
 
-backspace.addEventListener('click', () => {
+allclear.addEventListener('click', () => {
     display.innerHTML = '';
-})
+});
+
+
+backspace.addEventListener('click', () => {
+    let string = display.innerHTML;
+    let array = string.split('');
+    array.pop();
+    string = array.join('');
+    display.innerHTML = string;
+});
 
 modButton.addEventListener('click', (e) => {
     let string = display.innerHTML;

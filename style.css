@@ -91,19 +91,15 @@ color: black;
     color: aliceblue;
 }
 
-.bkspce {
+.allclear, .bkspce {
     background-color: rgb(245, 20, 20);
-    font-size: 30px;   
+    
 }
 
-.bkspce:hover {
+.allclear:hover {
     background-color: rgb(206, 63, 63);
     color: aliceblue;
-    font-size: 40px;
-}
-
-.bkspce:active {
-    font-size: 18px;
+    
 }
 
 .equal {
