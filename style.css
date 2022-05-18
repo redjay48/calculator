@@ -82,7 +82,7 @@ color: black;
     color: rgb(41, 41, 41);
 }
 
-.operators {
+.operators, .mod {
     background-color: rgb(58, 59, 59);
 }
 
