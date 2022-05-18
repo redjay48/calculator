@@ -56,7 +56,8 @@ window.addEventListener('keydown', (e) => {
 
 window.addEventListener('keydown', (e) => {
     const key = document.querySelector(`[data-key="${e.key}"]`);
-    if (e.key === 'Enter') {
+    let count = getFrequency(display.innerHTML, ['+', '-', '/', '*', 'mod', '%']);
+    if (e.key === 'Enter' && count > 1) {
         key.classList.add('press');
         audio.currentTime = 0;
         audio.play();
