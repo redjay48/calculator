@@ -8,7 +8,7 @@ const operators = document.querySelectorAll('.operators');
 const modButton = document.querySelector('.mod');
 const regex = /[\+\-\*\/\÷\x\^(mod)]/gm;
 const regex1 = /[\+\*\/\÷\x\^(mod)]/gm;
-let result = '';
+
 
 
 
