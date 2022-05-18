@@ -19,8 +19,6 @@ body {
     border: 12px solid rgb(75, 75, 75);
     border-radius: 12px;
     background-color: rgb(128, 128, 128);
-
-
 }
 
 .display {
@@ -40,8 +38,6 @@ body {
     flex-direction: column;
     gap: 8px;
     background-color: rgb(128, 128, 128);
-
-
 }
 
 .row1, .row2, .row3, .row4, .row5 {
@@ -49,9 +45,6 @@ body {
     flex: 1;
     gap: 12px;
     background-color: rgb(128, 128, 128);
-
-
-
 }
 
 button {
@@ -125,4 +118,5 @@ color: black;
 
 .press {
     font-size: 18px;
+    border-style: inset;
 }
